@@ -1,6 +1,6 @@
 # VPN SOCKS5 Proxy
 
-A lightweight SOCKS5 proxy server that enables seamless VPN access sharing between Windows and other devices (Mac, Linux, mobile). Perfect for accessing corporate VPNs, geo-restricted content, or any network resources available only through a VPN connection on your Windows machine.
+A lightweight SOCKS5 proxy server that enables seamless VPN access sharing between Windows and other devices (Mac, Linux, mobile). Perfect for accessing VPNs, geo-restricted content, or any network resources available only through a VPN connection on your Windows machine.
 
 ## 🎯 Use Cases
 
