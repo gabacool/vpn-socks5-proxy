@@ -1,0 +1,57 @@
+{
+  "name": "VPN SOCKS5 Proxy",
+  "type": "socks5",
+  "color": "#0055ff",
+  "address": "192.168.1.151",
+  "port": 1081,
+  "username": "",
+  "password": "",
+  "active": true,
+  "city": "VPN Server",
+  "country": "Local Network",
+  "proxyDNS": true,
+  "title": "VPN SOCKS5 Proxy (Auto-detected: 192.168.1.151:1081)",
+  "notes": "VPN SOCKS5 proxy for accessing VPN-protected resources. Update the 'address' field with your Windows machine's IP address.",
+  
+  "_instructions": {
+    "setup": [
+      "1. Install FoxyProxy extension in Chrome/Firefox",
+      "2. Import this configuration or create new proxy manually:",
+      "   - Title: VPN SOCKS5 Proxy", 
+      "   - Type: SOCKS5",
+      "   - Proxy IP: [Your Windows IP - check with ipconfig]",
+      "   - Port: 1081",
+      "   - Username/Password: Leave blank",
+      "3. Enable 'Proxy DNS' if available",
+      "4. Set proxy mode to 'Use proxy for all URLs' or create patterns"
+    ],
+    
+    "patterns": [
+      {
+        "title": "Corporate VPN Resources",
+        "pattern": "*.company.com/*",
+        "type": "wildcard",
+        "protocols": 1
+      },
+      {
+        "title": "Internal Networks", 
+        "pattern": "*://10.*/*",
+        "type": "wildcard",
+        "protocols": 1
+      },
+      {
+        "title": "Private Networks",
+        "pattern": "*://192.168.*/*", 
+        "type": "wildcard",
+        "protocols": 1
+      }
+    ],
+    
+    "troubleshooting": {
+      "connection_refused": "Check if SOCKS5 proxy is running on Windows machine",
+      "dns_errors": "Enable 'Proxy DNS' in FoxyProxy settings",
+      "slow_performance": "Try connecting to different VPN server or reduce concurrent connections",
+      "timeout_errors": "Check network connectivity between devices"
+    }
+  }
+}
